@@ -94,7 +94,7 @@ console.log(multipleOfNumbers);
 
 /* Functions
     Function is a separable, reusable piece of code. Some action that you want to do. It takes some input(arguments), do some manipulation
-    on it and return the output.
+    on it and return the output with key-word 'return'.
     To create a function you need do following:
     var functionName = function(argument){
         return argument * 2;
@@ -107,7 +107,7 @@ console.log(multipleOfNumbers);
  */
 
 //TODO: It's your turn to create a function. 
-//Step 1 - Name it add and pass in two argumnets (num1 and num2). 
+//Step 1 - Name it 'add' and pass in two argumnets (num1 and num2).
 //Step 2 - This function should return us a summ of num1 and num2. 
 //Step 3 - Call the function with numbers 2 and 3. To see result you can alert it or console.log it - to be sure that it works right.
 
@@ -118,18 +118,18 @@ var add = function(num1, num2){
 console.log(add(2, 3));
 
 
-//TODO: Great, you made it! Now let's do another function named substract and pass 2 arguments num1 and num2.
+//TODO: Great, you made it! Now let's do another function named 'subtract' and pass 2 arguments num1 and num2.
 //Call on it with numbers 5 and 1 and console.log the result.
 //PS: do you know that instead of numbers you can create variables that store those numbers and pass them as an arguments to your function, try it up.
 
 var firstNum = 5;
 var secondNum = 1;
 
-var substract = function(num1, num2){
+var subtract = function(num1, num2){
     return num1 - num2;
 };
 
-console.log(substract(firstNum, secondNum));
+console.log(subtract(firstNum, secondNum));
 
 
 /*If-else statements
@@ -153,26 +153,34 @@ console.log(substract(firstNum, secondNum));
 
 /*Comparison operators
     You remember we were talking about arithmetical operators and that we have different operators in programming, so
-    here comes time to introduce you comparison operators that we can use to compare two values(>, <, <=, =>, ==, !=).
+    here comes time to introduce you comparison operators that we can use to compare values(>, <, <=, =>, ==, !=).
     Most of them you know from math classes in school, some of them can be new for you, so '==' is checking equality, if two values are equal.
     '!=' - checks if they are not equal.
     PS: Don't mix up '=' and '==' as they have different meaning.
 */
 
-//TODO: So now we have 2 functions from previous task - add and substract. Let's tell machine to decide what action to run
-//depending on arithmetical operator(+,-,/, * etc). If operator is '+' we should use add function, else - substract function.
+//TODO: So now we have 2 functions from previous task - add and subtract. Let's tell machine to decide what action to run
+//depending on arithmetical operator(+,-,/, * etc). If operator is '+' we should use add function, else - subtract function.
 //Step 1, create a variable called operator and let it be equal to '-'
-//Step 2, create if/else statement, pass any 2 arguments to your functions.
+//Step 2, create if/else statement based on what operator we have,
+// if we have operator equal to '+' we call add function with any two numbers, else subtract function with any 2 numbers.
 //Don't forget to console.log it to see the result
 
+var operator = '-';
 
-if(operator == '+'){
+if(operator == '+') {
     console.log(add(10, 6));
+} else if (operator == '-') {
+    console.log(subtract(4, 1));
+} else if (operator == '/') {
+    console.log(divide(4, 1));
+} else if (operator == '*') {
+    console.log(multiply(4, 1));
 } else {
-    console.log(substract(4, 1));
-};
+    console.log("Sorry, we don't know this operator");
+}
 
-/*If-else if-else
+/*If - else if - else
     Hm, but what if we have 4 arithmetical operations in our calculator? Well, we can use if - else if - else structure.
     Example:
     var number = 7;
@@ -186,13 +194,20 @@ if(operator == '+'){
 */
 
 
-//TODO: Let's creat 2 more functions and name them divide and multiply. After that let's extand our if else check and see if 
-// our operator is equal to '+' call add function, else if operator is equal to '-' call substract function, if it equal to 
-// '/' call divide function, if it is '*' call multiply function, else console.log - Sorry, we don't know this operator.
+//TODO: Let's create 2 more functions and name them divide and multiply. After that let's extend our 'if else' check that we already created by
+// checking if it is equal to '/' - call 'divide' function, if it is '*' call multiply function,
+// else console.log - "Sorry, we don't know this operator".
 
 
+var divide = function (num1, num2) {
+    return num1 / num2;
+};
 
+var multiply = function (num1, num2) {
+    return num1 * num2;
+};
 
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Congratulations! You have finished Part 1 of JavaScript Basics! Stand up, stretch your legs, celebrate your achievement.//
+//Next step will be following up the instructions in advanced.js file.                                                    //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
